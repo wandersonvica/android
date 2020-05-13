@@ -1,0 +1,14 @@
+echo "# android" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/wandersonvica/android.git
+git push -u origin master
+ Entre alguns elementos encontrados dentro do arquivo AndroidManifest.xml, estão:
+
+<manifest> - elemento raiz do arquivo AndroidManifest.xml, deve conter a tag <application>.
+<application> - contém outras tags que declaram cada um dos componentes do aplicativo e propriedades inerentes à configuração dos Activities.
+<uses-permission> - define as permissões que o aplicativo deve ganhar para funcionar adequadamente, em regra, assim que o usuário instala a aplicação, já aceita o termo concedendo as devidas permissões requisitadas pelo aplicativo.
+<activity> - responsável por adicionar as Activities criadas no projeto, todas devem ser adicionadas para que o sistema operacional saiba quais serão executadas, caso alguma não esteja nessa tag, um erro de execução será gerado ao tentar compilar o código do projeto.
+<service> - define o Service como um dos componentes do aplicativo. Em geral, esses elementos são usados para execução em plano de fundo, fazendo requisições para outros aplicativos e servidores.
+<receiver> - especifica um BroadcastReceiver, dessa forma, a aplicação poderá disponibilizar serviços através dos Intents, ou seja, poderá receber requisições de outros aplicativos instalados no sistema operacional. Por exemplo, para tirar fotos, vários aplicativos fazem uso do aplicativo câmera do dispositivo, consumindo serviços através de BroadcastReceivers.
